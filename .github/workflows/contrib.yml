@@ -1,11 +1,9 @@
 name: PR Contribution Detector
 
 on:
-  pull_request_target:
-    types:
-      - opened
-      - reopened
-
+  pull_request:
+  merge_group:
+  
 jobs:
   checker:
     runs-on: ubuntu-latest
@@ -28,3 +26,7 @@ jobs:
       - name: Install Cilium CLI
         run: |
           echo author_association=${{ github.event.pull_request.author_association }}
+
+  ghcr:
+    uses: ./.github/workflows/reuse.yml
+    
