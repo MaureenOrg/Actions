@@ -1,11 +1,9 @@
 name: PR Contribution Detector
 
 on:
-  pull_request_target:
-    types:
-      - opened
-      - reopened
-
+  pull_request:
+  merge_group:
+  
 jobs:
   checker:
     runs-on: ubuntu-latest
