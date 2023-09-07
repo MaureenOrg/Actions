@@ -26,3 +26,7 @@ jobs:
       - name: Install Cilium CLI
         run: |
           echo author_association=${{ github.event.pull_request.author_association }}
+
+  ghcr:
+    uses: ./.github/workflows/reuse.yml
+    
