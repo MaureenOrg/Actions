@@ -10,6 +10,9 @@ on:
       doNotify:
         type: string
         default: "false"
+      doTest:
+        type: string
+        default: "false"
 jobs:
 
   job1:  
