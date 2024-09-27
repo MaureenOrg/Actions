@@ -13,6 +13,9 @@ on:
       doTest:
         type: string
         default: "false"
+      doTestAgain:
+        type: string
+        default: "false"
 jobs:
 
   job1:  
