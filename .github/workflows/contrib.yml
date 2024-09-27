@@ -9,6 +9,9 @@ jobs:
   checker:
     runs-on: ubuntu-latest
     steps:
+        - name: Sleep for 3 minutes
+          run: sleep 180s
+          shell: bash
         - name: Install Cilium CLI
           run: |
             echo author_association=${{ github.event.pull_request.author_association }}
